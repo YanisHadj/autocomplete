@@ -1,0 +1,12 @@
+.body {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    max-width: 600px; 
+    padding: 20px; 
+}
+
+.title {
+    margin: 0 0 10px;
+    font-size: 20px; 
+}
