@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Autocomplete.css";
 import { faSearch, faTrash } from "@fortawesome/free-solid-svg-icons";
 
-export default function Autocomplete({ items, isMultiSelect = false, onGetDataUser, onGetDataProduct, onMixedData }) {
+export default function Autocomplete({ items, isMultiSelect = false, onGetDataUser, onGetDataProduct, onMixedData, isSuggestion = false }) {
     const [inputValue, setInputValue] = useState('');
     const [list, setList] = useState([]);
     const [suggestions, setSuggestions] = useState([]);
@@ -34,7 +34,6 @@ export default function Autocomplete({ items, isMultiSelect = false, onGetDataUs
     const handleChange = (e) => {
         const value = e.target.value;
         setInputValue(value);
-
         if (value) {
             const filteredList = list.filter(item =>
                 item.firstName && item.lastName 

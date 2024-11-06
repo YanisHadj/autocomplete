@@ -50,28 +50,28 @@ createRoot(document.getElementById('root')).render(
        <StrictMode>
         <div className="body">
             <h2 className='title'> 1. Autocomplete user simple avec data en props</h2>
-            <Autocomplete items={names} />
+            <Autocomplete items={names} isSuggestion={false}/>
 
             <h2 className='title'>2. Autocomplete User simple avec data en fonction</h2>
-            <Autocomplete onGetDataUser={getDataUser}/> 
+            <Autocomplete onGetDataUser={getDataUser}isSuggestion={false}/> 
 
             <h2 className='title'>3.Autocomplete User multiple avec data en fonction</h2>
-            <Autocomplete onGetDataUser={getDataUser} isMultiSelect={true}/>
+            <Autocomplete onGetDataUser={getDataUser} isMultiSelect={true}isSuggestion={false}/>
 
             <h2 className='title'>4. Autocomplete Product simple avec data en fonction</h2>
             <Autocomplete onGetDataProduct={getDataProduct}/> 
 
             <h2 className='title'>5. Autocomplete Product simple avec data en fonctiont</h2>
-            <Autocomplete onGetDataProduct={getDataProduct} isMultiSelect={true}/> 
+            <Autocomplete onGetDataProduct={getDataProduct} isMultiSelect={true} isSuggestion={false}/> 
 
             <h2 className='title'>6.Autocomplete Mix multiple avec data en fonction</h2>
-            <Autocomplete isMultiSelect={true} onMixedData={mixedData}/>
+            <Autocomplete isMultiSelect={true} onMixedData={mixedData} isSuggestion={false}/>
             
             <h2 className='title'>7. Autocomplete Product multiple avec template et data en fonction</h2>
             <Autocomplete />  
 
             <h2 className='title'>8. Autocomplete Product simple avec suggestion au lieu d'une liste</h2>
-            <Autocomplete/>  
+            <Autocomplete onGetDataProduct={getDataProduct} isSuggestion={false} />  
         </div>
     </StrictMode>
 );
